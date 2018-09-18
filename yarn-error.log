@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\03caelk\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js run test-watch2
+  C:\Program Files\nodejs\node.exe C:\Users\03caelk\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js run build:prod
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\app\client\03caelk\product\12.1.0\client_1\bin;C:\app\03caelk\product\12.1.0\client_1;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\03caelk\AppData\Local\atom\bin;C:\Users\03caelk\AppData\Roaming\npm
@@ -23,10 +23,11 @@ npm manifest:
     "scripts": {
       "serve": "live-server public/",
       "build": "webpack",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
       "dev-server": "webpack-dev-server",
       "test": "jest --config=jest.config.json",
-      "test-watch": "jest --watch --config=jest.config.json",
-      "test-watch2": "test --watch"
+      "test-watch": "jest --watch --config=jest.config.json"
     },
     "dependencies": {
       "babel-cli": "^6.26.0",
@@ -40,8 +41,10 @@ npm manifest:
       "enzyme": "^3.4.1",
       "enzyme-adapter-react-16": "^1.2.0",
       "enzyme-to-json": "^3.3.4",
+      "extract-text-webpack-plugin": "^4.0.0-beta.0",
       "jest": "20.0.4",
       "live-server": "^1.2.0",
+      "mini-css-extract-plugin": "^0.4.2",
       "moment": "2.19.3",
       "node-sass": "^4.9.0",
       "normalize.css": "^8.0.0",
@@ -278,6 +281,10 @@ Lockfile:
       object.entries "^1.0.4"
       prop-types "^15.6.1"
       prop-types-exact "^1.1.2"
+  
+  ajv-errors@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.0.tgz#ecf021fa108fd17dfb5e6b383f2dd233e31ffc59"
   
   ajv-keywords@^3.1.0:
     version "3.2.0"
@@ -538,7 +545,7 @@ Lockfile:
     version "1.5.2"
     resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
   
-  async@^2.1.4:
+  async@^2.1.4, async@^2.4.1:
     version "2.6.1"
     resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
     dependencies:
@@ -2993,6 +3000,15 @@ Lockfile:
       snapdragon "^0.8.1"
       to-regex "^3.0.1"
   
+  extract-text-webpack-plugin@^4.0.0-beta.0:
+    version "4.0.0-beta.0"
+    resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-4.0.0-beta.0.tgz#f7361d7ff430b42961f8d1321ba8c1757b5d4c42"
+    dependencies:
+      async "^2.4.1"
+      loader-utils "^1.1.0"
+      schema-utils "^0.4.5"
+      webpack-sources "^1.1.0"
+  
   extsprintf@1.3.0:
     version "1.3.0"
     resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
@@ -5206,6 +5222,14 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.0.tgz#df3d3652a73fded6b9b0b24146e6fd052353458e"
   
+  mini-css-extract-plugin@^0.4.2:
+    version "0.4.2"
+    resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-0.4.2.tgz#b3ecc0d6b1bbe5ff14add42b946a7b200cf78651"
+    dependencies:
+      loader-utils "^1.1.0"
+      schema-utils "^1.0.0"
+      webpack-sources "^1.1.0"
+  
   minimalistic-assert@^1.0.0:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
@@ -7097,6 +7121,14 @@ Lockfile:
       ajv "^6.1.0"
       ajv-keywords "^3.1.0"
   
+  schema-utils@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-1.0.0.tgz#0b79a93204d7b600d4b2850d1f66c2a34951c770"
+    dependencies:
+      ajv "^6.1.0"
+      ajv-errors "^1.0.0"
+      ajv-keywords "^3.1.0"
+  
   scoped-regex@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/scoped-regex/-/scoped-regex-1.0.0.tgz#a346bb1acd4207ae70bd7c0c7ca9e566b6baddb8"
@@ -8514,7 +8546,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: C:\Windows\system32\cmd.exe
-  Arguments: /d /s /c test --watch
+  Arguments: /d /s /c webpack -p --env production
   Directory: C:\Users\03caelk\Documents\React_Course_Projects\expensify-app
   Output:
   
