@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\03caelk\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js run dev-server
+  C:\Program Files\nodejs\node.exe C:\Users\03caelk\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js run test-watch
 
 PATH: 
-  C:\Users\03caelk\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\03caelk\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin;C:\Python27;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\app\client\03caelk\product\12.1.0\client_1\bin;C:\app\03caelk\product\12.1.0\client_1;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Users\03caelk\AppData\Local\atom\bin;C:\Users\03caelk\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\app\client\03caelk\product\12.1.0\client_1\bin;C:\app\03caelk\product\12.1.0\client_1;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\;C:\Program Files (x86)\Shoreline Communications\ShoreWare Client\win64;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\03caelk\AppData\Local\atom\bin;C:\Users\03caelk\AppData\Roaming\npm;C:\Program Files\heroku\bin
 
 Yarn version: 
   1.5.1
@@ -8504,7 +8504,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: C:\Windows\system32\cmd.exe
-  Arguments: /d /s /c webpack-dev-server
+  Arguments: /d /s /c jest --watch --config=jest.config.json
   Directory: C:\Users\03caelk\Documents\React_Course_Projects\expensify-app
   Output:
   
