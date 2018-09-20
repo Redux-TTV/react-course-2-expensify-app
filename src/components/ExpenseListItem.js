@@ -1,5 +1,3 @@
-// export stateless functional Component
-// render: description, amount, createdAt
 import React from 'react';
 import {Link} from 'react-router-dom'
 import moment from 'moment';
