@@ -4,8 +4,6 @@ exports[`should render ExpenseDashBoardPage correctly 1`] = `
 <div>
   <Connect(ExpenseListFilters) />
   <Connect(ExpenseList) />
-  <ExpensesSummary
-    expenses={Array []}
-  />
+  <Connect(ExpensesSummary) />
 </div>
 `;
