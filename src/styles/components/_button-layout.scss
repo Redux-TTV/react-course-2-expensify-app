@@ -1,0 +1,25 @@
+.button-layout__login {
+  background: $off-blue;
+  border: none;
+  border-radius: 2px;
+  font-weight: 300;
+  font-size: $font-size-large;
+  padding: $s-size;
+  color: $off-white;
+}
+
+.button-layout__add-expense {
+  @extend .button-layout__login;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.button-layout__remove-expense {
+  @extend .button-layout__add-expense;
+  background: $off-grey;
+}
+
+.button--logout {
+  background: none;
+}
